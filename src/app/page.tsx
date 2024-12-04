@@ -1,101 +1,216 @@
-import Image from "next/image";
+import Image from 'next/image';
+import { FC } from 'react';
 
-export default function Home() {
+const Home: FC = () => {
+  const data= [
+    {
+      "img":"/dummy.jpeg"
+    },
+    {
+      "img":"/dummy.jpeg"
+    },
+    {
+      "img":"/dummy.jpeg"
+    },
+    {
+      "img":"/dummy.jpeg"
+    },
+  ]
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-white">
+      <header className="flex justify-between items-center px-8 py-2 bg-white shadow-md">
+        <div className="flex items-center space-x-2">
+          <Image
+            src="/logo.png" 
+            alt=""
+            width={60}
+            height={100}
+          />
+          
+          {/* <h1 className="text-xl font-bold">Filter You™</h1> */}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <nav className="space-x-12">
+          <a href="#home" className="text-black hover:text-pink-700" style={{fontFamily:'font12'}}>
+            Home
+          </a>
+          <a href="#services" className="text-black hover:text-pink-700" style={{fontFamily:"font12"}}>
+            Services
+          </a>
+          <a href="#about" className="text-black hover:text-pink-700" style={{fontFamily:"font12"}}>
+            About Us
+          </a>
+        </nav>
+      </header>
+     <div className=''>
+      <img src="/background.png" className='w-full relative h-[40rem] opacity-70'/>
+     </div>
+     <section className="relative py-10 px-48 mt-[-38rem]">
+  <div className="flex flex-col lg:flex-row items-start justify-between w-full">
+  
+    <div className="w-full lg:w-1/2 space-y-6 mt-16">
+      <h2
+        className="text-4xl font-bold text-gray-900"
+        style={{ fontFamily: 'font12' }}
+      >
+        We’re Shaping the Future of Brand Engagement with{' '}
+        <span className="text-pink-600">AR VR & AI</span>.
+      </h2>
+      <p
+        className="text-lg text-gray-700"
+        style={{ fontFamily: 'font12' }}
+      >
+        Empower Your Marketing: Create Unforgettable Social AR, VR & AI Experiences.
+      </p>
+      <button
+        className="px-6 py-3 bg-pink-500 text-white rounded-lg font-bold shadow-lg hover:bg-pink-600"
+        style={{ fontFamily: 'font12' }}
+      >
+        Get a FREE Consultation
+      </button>
+    </div>
+
+    <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-end">
+      <div className="relative">
+        <video
+          src="/demo.mp4"
+          controls
+          width="270"
+          height="260"
+          autoPlay
+          loop
+          muted
+        ></video>
+        <div className="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow">
+          <span>🍰</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section className='mt-[12rem] px-28 mb-32 '>
+  <p className='text-5xl text-purple-800 mb-2' style={{fontFamily:"font12"}}>
+  Let us Craft Your Dream AR Experience:</p>
+  <p className='text-3xl text-pink-600 mb-10' style={{fontFamily:"font12"}}>We Hyper Personalise your AR brand strategy!</p>
+
+  <div className='flex space-x-12 text-purple-500 font-bold mb-12' style={{fontFamily:"font12"}}>
+  <button className='w-[200px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Marketing</button>
+  <button className='w-[230px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Wedding and Gifting</button>
+  <button className='w-[210px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Snapchat filters</button>
+</div>
+
+<div className="flex space-x-8 ">
+      <video src="/snap.mp4" controls autoPlay
+          loop
+          muted  className="w-[15rem] h-[19rem] rounded-lg" />
+      <video src="/thank-you.mp4" className="w-[15rem] h-[19rem] rounded-lg" controls autoPlay
+          loop
+          muted  />
+      <img src="/ar-filter.jpg" alt="item" className="w-[13rem] h-[19rem] rounded-lg" />
+      <video src="/ar-wedding-invite.mp4" className="w-[15rem] h-[19rem] rounded-lg" controls autoPlay
+          loop
+          muted />
+</div>
+
+
+</section>
     </div>
   );
-}
+};
+
+export default Home;
+// import Image from 'next/image';
+// import { FC } from 'react';
+
+// const Home: FC = () => {
+//   const data = [
+//     { img: '/dummy.jpeg' },
+//     { img: '/dummy.jpeg' },
+//     { img: '/dummy.jpeg' },
+//     { img: '/dummy.jpeg' },
+//   ];
+
+//   return (
+//     <div className="bg-white">
+//       <header className="flex justify-between items-center px-4 sm:px-8 py-2 bg-white shadow-md">
+//         <div className="flex items-center space-x-2">
+//           <Image src="/logo.png" alt="Logo" width={60} height={100} />
+//         </div>
+//         <nav className="space-x-4 sm:space-x-8">
+//           <a href="#home" className="text-black hover:text-pink-700">
+//             Home
+//           </a>
+//           <a href="#services" className="text-black hover:text-pink-700">
+//             Services
+//           </a>
+//         </nav>
+//       </header>
+
+//       <div>
+//         <img src="/background.png" className="w-full h-[20rem] sm:h-[40rem] object-cover opacity-70" />
+//       </div>
+
+//       <section className="relative py-8 px-4 sm:px-12 lg:px-24">
+//         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
+//           {/* Text Section */}
+//           <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6">
+//             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
+//               We’re Shaping the Future of Brand Engagement with{' '}
+//               <span className="text-pink-600">AR VR & AI</span>.
+//             </h2>
+//             <p className="text-lg text-gray-700">
+//               Empower Your Marketing: Create Unforgettable Social AR, VR & AI Experiences.
+//             </p>
+//             <button className="px-6 py-3 bg-pink-500 text-white rounded-lg font-bold shadow-lg hover:bg-pink-600">
+//               Get a FREE Consultation
+//             </button>
+//           </div>
+
+//           {/* Video Section */}
+//           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+//             <div className="relative">
+//               <video src="/demo.mp4" controls width="270" height="260" autoPlay loop muted></video>
+//               <div className="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow">
+//                 <span>🍰</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className="mt-12 px-4 sm:px-8 lg:px-28">
+//         <p className="text-3xl sm:text-5xl text-purple-800 mb-2">
+//           Let us Craft Your Dream AR Experience:
+//         </p>
+//         <p className="text-xl sm:text-3xl text-pink-600 mb-8">
+//           We Hyper Personalise your AR brand strategy!
+//         </p>
+
+//         {/* Buttons Section */}
+//         <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+//           <button className="w-full sm:w-auto px-4 py-2 rounded-md bg-gradient-to-tl from-pink-200 to-purple-200 shadow-sm border-2 border-purple-200">
+//             Marketing
+//           </button>
+//           <button className="w-full sm:w-auto px-4 py-2 rounded-md bg-gradient-to-tl from-pink-200 to-purple-200 shadow-sm border-2 border-purple-200">
+//             Wedding and Gifting
+//           </button>
+//           <button className="w-full sm:w-auto px-4 py-2 rounded-md bg-gradient-to-tl from-pink-200 to-purple-200 shadow-sm border-2 border-purple-200">
+//             Snapchat filters
+//           </button>
+//         </div>
+
+//         {/* Image Section */}
+//         <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-8">
+//           {data.map((item, index) => (
+//             <div key={index}>
+//               <img src={item.img} alt="item" className="w-40 h-52 object-cover rounded-lg" />
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Home;

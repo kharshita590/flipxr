@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'pink-glow': '0 0 8px 4px rgba(147, 112, 219, 0.3)',
+        'blue-glow': '0 4px 6px rgba(59, 130, 246, 0.5)',  
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
