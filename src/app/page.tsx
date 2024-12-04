@@ -2,20 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 const Home: FC = () => {
-  const data= [
-    {
-      "img":"/dummy.jpeg"
-    },
-    {
-      "img":"/dummy.jpeg"
-    },
-    {
-      "img":"/dummy.jpeg"
-    },
-    {
-      "img":"/dummy.jpeg"
-    },
-  ]
+
   return (
     <div className="bg-white">
       <header className="flex justify-between items-center px-8 py-2 bg-white shadow-md">
