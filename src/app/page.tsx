@@ -76,28 +76,37 @@ const Home: FC = () => {
   </div>
 </section>
 
-<section className='mt-[12rem] px-28 mb-32 '>
+<section className='mt-[12rem] px-28  mb-24'>
   <p className='text-5xl text-purple-800 mb-2' style={{fontFamily:"font12"}}>
   Let us Craft Your Dream AR Experience:</p>
   <p className='text-3xl text-pink-600 mb-10' style={{fontFamily:"font12"}}>We Hyper Personalise your AR brand strategy!</p>
 
-  <div className='flex space-x-12 text-purple-500 font-bold mb-12' style={{fontFamily:"font12"}}>
+  <div className='flex space-x-12 text-purple-500 font-bold mb-20' style={{fontFamily:"font12"}}>
   <button className='w-[200px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Marketing</button>
   <button className='w-[230px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Wedding and Gifting</button>
   <button className='w-[210px] h-[50px] p-2 rounded-full border-1 border-purple-300 shadow-pink-glow '>Snapchat filters</button>
 </div>
 
 <div className="flex space-x-8 ">
-      <video src="/snap.mp4" controls autoPlay
-          loop
-          muted  className="w-[15rem] h-[19rem] rounded-lg" />
-      <video src="/thank-you.mp4" className="w-[15rem] h-[19rem] rounded-lg" controls autoPlay
-          loop
-          muted  />
-      <img src="/ar-filter.jpg" alt="item" className="w-[13rem] h-[19rem] rounded-lg" />
-      <video src="/ar-wedding-invite.mp4" className="w-[15rem] h-[19rem] rounded-lg" controls autoPlay
+<video src="/thank-you (3).mp4" className="w-[15rem] h-[25rem] rounded-lg overflow-hidden" controls autoPlay
           loop
           muted />
+
+{/* <video className="rounded-lg" controls>
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> */}
+
+     
+      <video src="/thank-you (2).mp4" className="w-[15rem] h-[25rem] rounded-lg" controls autoPlay
+          loop
+          muted  />
+     
+      <video src="/thank-you (1).mp4" controls autoPlay
+          loop
+          muted  className="w-[15rem] h-[25rem] rounded-lg" />
+           <img src="/ar-filter.jpg" alt="item" className="w-[14rem] h-[25rem] rounded-lg" />
+     
 </div>
 
 

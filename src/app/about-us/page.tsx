@@ -31,7 +31,7 @@ const About: FC = () => {
       <img src="/waves.png" className='w-full relative h-[45rem] opacity-70'/>
      </div>
      <div className="relative py-10 px-48 mt-[-45rem]">
-        <h1 style={{ fontFamily: 'font12' }} className='text-[3.5rem]'>About Us </h1>
+        <h1 style={{ fontFamily: 'font12' }} className='text-[3.5rem] text-black'>About Us </h1>
      </div>
      <div className='mt-[5rem]'>
      <div className='relative py-10 px-48'>
